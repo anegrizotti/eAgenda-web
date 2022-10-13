@@ -7,16 +7,16 @@
       <!-- Titulo -->
       <div class="text-md-start">
         <h1 class="fw-bold text-primary">
-            Listar Contatos
+            Listar Compromissos
           </h1>
         <hr />
       </div>
 
       <!-- Barra de Ações -->
       <div class="d-grid d-md-flex gap-1 mt-5">
-        <a [routerLink]="['/contatos/inserir']"  role="button" class="btn btn-primary me-md-1">
+        <a [routerLink]="['/compromissos/inserir']"  role="button" class="btn btn-primary me-md-1">
             <i class="pi pi-plus-circle me-2"></i>
-            Novo Contato
+            Novo Compromisso
         </a>
       </div>
 
@@ -25,24 +25,28 @@
         <table class="table table-light table-striped table-hover table-borderless">
           <thead class="thead-dark text-center">
           <tr>
-            <th>Nome</th>
-            <th>Telefone</th>
-            <th>Cargo</th>
+            <th>Assunto</th>
+            <th>Data</th>
+            <th>Hora de Início</th>
+            <th>Hora de Termino</th>
+            <th>Contato</th>
             <th>Ações</th>
           </tr>
           </thead>
           <tbody class="text-center">
-            <tr *ngFor="let c of (contatos$ | async)">
-              <td>{{c.nome}}</td>
-              <td>{{c.telefone}}</td>
-              <td>{{c.cargo}}</td>
+            <tr *ngFor="let c of (compromissos$ | async)">
+              <td>{{c.assunto}}</td>
+              <td>{{c.data}}</td>
+              <td>{{c.horaInicio}}</td>
+              <td>{{c.horaTermino}}</td>
+              <td>{{c.nomeContato}}</td>
 
               <td class="d-grid d-md-block">
-                <button [routerLink]="['/contatos/editar', c.id]"
+                <button [routerLink]="['/compromissos/editar', c.id]"
                   type="button" class="btn btn-sm btn-primary me-0 me-md-1 mb-1 mb-md-auto">
                   <i class="bi bi-pencil"></i>
                 </button>
-                <button [routerLink]="['/contatos/excluir', c.id]"
+                <button [routerLink]="['/compromissos/excluir', c.id]"
                   type="button" class="btn btn-sm btn-outline-danger me-0 me-md-1 mb-1 mb-md-auto">
                   <i class="bi bi-trash"></i>
                 </button>

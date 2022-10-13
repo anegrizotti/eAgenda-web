@@ -6,11 +6,4 @@ import { Component, OnInit } from '@angular/core';
   <router-outlet></router-outlet>
   `
 })
-export class CompromissoAppComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class CompromissoAppComponent { }
