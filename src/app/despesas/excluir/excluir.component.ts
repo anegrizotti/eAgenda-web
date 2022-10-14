@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class ExcluirComponent implements OnInit {
+export class ExcluirDespesaComponent implements OnInit {
 
   constructor() { }
 

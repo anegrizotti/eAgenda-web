@@ -4,7 +4,6 @@ import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ContatoService } from 'src/app/contatos/services/contato.service';
-import { FormsContatoViewModel } from 'src/app/contatos/view-models/forms-contato.view-model';
 import { ListarContatoViewModel } from 'src/app/contatos/view-models/listar-contato.view-model';
 import { CompromissoService } from '../services/compromisso.service';
 import { FormsCompromissoViewModel, TipoLocalizacaoCompromissoEnum } from '../view-models/forms-compromisso.view-models';
