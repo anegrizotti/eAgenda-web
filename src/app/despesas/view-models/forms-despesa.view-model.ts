@@ -7,11 +7,11 @@ export class FormsDespesaViewModel {
   valor: DecimalPipe;
   data: Date;
   formaPagamento: FormaPgtoDespesaEnum;
-  categoriasSelecionadas: FormsCategoriaViewModel[] = [];
+  categorias: FormsCategoriaViewModel[] = [];
 }
 
 export enum FormaPgtoDespesaEnum {
-  Pix, Dinheiro, CartaoCredito
+  PIX, Dinheiro, CartaoCredito
 }
 
 

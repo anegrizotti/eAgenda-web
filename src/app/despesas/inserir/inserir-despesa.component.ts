@@ -40,11 +40,11 @@ export class InserirDespesaComponent implements OnInit {
       descricao: ['', [Validators.required, Validators.minLength(3)]],
       valor: ['', [Validators.required]],
       data: ['', [Validators.required]],
-      formaPagamento: ['', [Validators.required]],
+      formaPagamento: ['', [Validators.required]]
     });
 
     this.formCategorias = this.formBuilder.group({
-      tituloItem: ['']
+      titulo: ['']
     });
 
     this.categorias$ = this.categoriaService.selecionarTodos();
@@ -66,6 +66,10 @@ export class InserirDespesaComponent implements OnInit {
     return this.formDespesa.get('formaPagamento');
   }
 
+  get categoriasSelecionadas() {
+    return this.formDespesa.get('categoriasSelecionadas');
+  }
+
   get titulo() {
     return this.formCategorias.get('titulo');
   }
@@ -75,7 +79,7 @@ export class InserirDespesaComponent implements OnInit {
       let categoria = new FormsCategoriaViewModel();
       categoria.titulo = this.titulo.value;
 
-      this.despesaFormVM.categoriasSelecionadas.push(categoria);
+      this.despesaFormVM.categorias.push(categoria);
 
       this.formCategorias.reset();
     }
